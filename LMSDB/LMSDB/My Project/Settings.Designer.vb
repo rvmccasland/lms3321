@@ -63,6 +63,17 @@ Namespace My
                 Return CType(Me("ldbmsrevConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;persistsecurityinfo=True;database=ldbmsrev;password"& _ 
+            "=QzmP28chap73")>  _
+        Public ReadOnly Property ldbmsrevConnectionString1() As String
+            Get
+                Return CType(Me("ldbmsrevConnectionString1"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
