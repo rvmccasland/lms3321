@@ -77,6 +77,7 @@ Partial Class LoginForm1
         Me.UsernameTextBox.Name = "UsernameTextBox"
         Me.UsernameTextBox.Size = New System.Drawing.Size(220, 20)
         Me.UsernameTextBox.TabIndex = 1
+        Me.UsernameTextBox.Text = "dobiero"
         '
         'PasswordTextBox
         '
@@ -87,24 +88,29 @@ Partial Class LoginForm1
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.Size = New System.Drawing.Size(220, 20)
         Me.PasswordTextBox.TabIndex = 3
+        Me.PasswordTextBox.Text = "dobiero2019"
         Me.PasswordTextBox.UseSystemPasswordChar = True
         '
         'Login
         '
+        Me.Login.BackColor = System.Drawing.Color.Lime
         Me.Login.Location = New System.Drawing.Point(197, 161)
         Me.Login.Name = "Login"
         Me.Login.Size = New System.Drawing.Size(94, 23)
         Me.Login.TabIndex = 4
         Me.Login.Text = "&Login"
+        Me.Login.UseVisualStyleBackColor = False
         '
         'Cancel
         '
+        Me.Cancel.BackColor = System.Drawing.Color.Red
         Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Cancel.Location = New System.Drawing.Point(300, 161)
         Me.Cancel.Name = "Cancel"
         Me.Cancel.Size = New System.Drawing.Size(94, 23)
         Me.Cancel.TabIndex = 5
         Me.Cancel.Text = "&Cancel"
+        Me.Cancel.UseVisualStyleBackColor = False
         '
         'CheckBox1
         '

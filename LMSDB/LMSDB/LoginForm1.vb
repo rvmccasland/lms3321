@@ -7,39 +7,67 @@ Public Class LoginForm1
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Login.Click
 
-        Mysqlcon = New MySqlConnection
-        Mysqlcon.ConnectionString = "server=localhost;userid=root;password=QzmP28chap73;database=ldbmsrev"
-        Dim reader As MySqlDataReader
-
         Try
-            Mysqlcon.Open()
-            'MessageBox.Show("Connected to Database Successful")
+            Dim db As New MYSQL_DB_()
+            Dim adapter As New MySqlDataAdapter()
+            Dim table As New DataTable()
+            Dim command As New MySqlCommand("select * from ldbmsrev.user where username = @usn and password = @pass", db.getConnection)
 
-            'Querry database for username and password
-            Dim query As String
-            query = "select * from ldbmsrev.user where username = '" & UsernameTextBox.Text & "' and password = '" & PasswordTextBox.Text & "'"
-            command = New MySqlCommand(query, Mysqlcon)
-            reader = command.ExecuteReader
+            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = UsernameTextBox.Text
+            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = PasswordTextBox.Text
 
-            Dim count As Integer
-            count = 0
+            adapter.SelectCommand = command
+            adapter.Fill(table)
 
-            While reader.Read
-                count = count + 1
-            End While
+            If table.Rows.Count > 0 Then
 
-            If count = 1 Then
-                MessageBox.Show("Username and Password are Valid")
-                StudentForm.Show()
+                MsgBox("Username and Password are valid")
+
+                MainForm.Show()
+
+                'Me.Close()
+
+                'StudentForm.Show()
                 Me.Hide()
-            ElseIf count > 1 Then
-                MessageBox.Show("Username and Password are Duplicate")
-            Else
-                MsgBox("Username and Password are Invalid", MsgBoxStyle.Critical, "Login Error")
 
+            Else
+                MsgBox("Invalid Username or Passwprd", MsgBoxStyle.Critical, " Login Error ")
+                Me.Close()
             End If
 
-            Mysqlcon.Close()
+            'Mysqlcon = New MySqlConnection
+            'Mysqlcon.ConnectionString = "server=localhost;userid=root;password=QzmP28chap73;database=ldbmsrev"
+            'Dim reader As MySqlDataReader
+
+            'Try
+            '    Mysqlcon.Open()
+            '    'MessageBox.Show("Connected to Database Successful")
+
+            '    'Querry database for username and password
+            '    Dim query As String
+            '    query = "select * from ldbmsrev.user where username = '" & UsernameTextBox.Text & "' and password = '" & PasswordTextBox.Text & "'"
+            '    command = New MySqlCommand(query, Mysqlcon)
+            '    reader = command.ExecuteReader
+
+            '    Dim count As Integer
+            '    count = 0
+
+            '    While reader.Read
+            '        count = count + 1
+            '    End While
+
+            '    If count = 1 Then
+            '        MessageBox.Show("Username and Password are Valid")
+            '        StudentForm.Show()
+            '        Me.Hide()
+            '    ElseIf count > 1 Then
+            '        MessageBox.Show("Username and Password are Duplicate")
+            '    Else
+            '        MsgBox("Username and Password are Invalid", MsgBoxStyle.Critical, "Login Error")
+
+            '    End If
+
+            '    Mysqlcon.Close()
 
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
