@@ -63,4 +63,18 @@
         editCourseF.Show(Me)
 
     End Sub
+
+    Private Sub ManageCoursesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageCoursesToolStripMenuItem.Click
+
+        Dim manageCourseF As New ManagecourseForm()
+        manageCourseF.Show(Me)
+
+    End Sub
+
+    Private Sub RecordNewGradesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecordNewGradesToolStripMenuItem.Click
+
+        Dim CalculateGradesF As New NewTestForm()
+        CalculateGradesF.Show(Me)
+
+    End Sub
 End Class

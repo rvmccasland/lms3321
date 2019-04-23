@@ -24,7 +24,6 @@
 
     End Sub
 
-
     Private Sub ComboBoxEditCourse_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxEditCourse.SelectedIndexChanged
 
         Try
@@ -45,8 +44,6 @@
     Private Sub ButtonEditCourse_Click(sender As Object, e As EventArgs) Handles ButtonEditCourse.Click
 
         'No changes to course title no edit
-
-
 
         Dim Course_Title As String = TextBoxCourseTitel.Text
         Dim Course_Hours As Integer = NumericUpDownCourseHrs.Value

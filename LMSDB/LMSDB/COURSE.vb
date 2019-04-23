@@ -113,5 +113,21 @@ WHERE `Course_id` = @Course_idUpdate;", db.getConnection)
         db.closeConnection()
 
     End Function
+    'Function to count rows
+    Function ExecCount(ByVal query As String) As String
+
+        Dim command As New MySqlCommand(query, db.getConnection)
+
+        db.openConnection()
+        Return command.ExecuteScalar().ToString()
+        db.closeConnection()
+
+    End Function
+    'function to return total courses
+    Function TotalCourses() As String
+
+        Return ExecCount("SELECT COUNT(*) FROM `ldbmsrev`.`course`;")
+
+    End Function
 
 End Class

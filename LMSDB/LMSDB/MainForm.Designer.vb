@@ -32,6 +32,9 @@ Partial Class MainForm
         Me.ManageStudentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.COURSEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewCourseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RemoveCourseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditCourseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageCoursesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SCOREToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecordNewGradesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PROGRAMSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -39,9 +42,7 @@ Partial Class MainForm
         Me.TEACHERToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewTeacherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EXITToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RemoveCourseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditCourseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -93,7 +94,7 @@ Partial Class MainForm
         '
         'COURSEToolStripMenuItem
         '
-        Me.COURSEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewCourseToolStripMenuItem, Me.RemoveCourseToolStripMenuItem, Me.EditCourseToolStripMenuItem})
+        Me.COURSEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewCourseToolStripMenuItem, Me.RemoveCourseToolStripMenuItem, Me.EditCourseToolStripMenuItem, Me.ManageCoursesToolStripMenuItem})
         Me.COURSEToolStripMenuItem.Name = "COURSEToolStripMenuItem"
         Me.COURSEToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
         Me.COURSEToolStripMenuItem.Text = "COURSES"
@@ -101,8 +102,26 @@ Partial Class MainForm
         'AddNewCourseToolStripMenuItem
         '
         Me.AddNewCourseToolStripMenuItem.Name = "AddNewCourseToolStripMenuItem"
-        Me.AddNewCourseToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AddNewCourseToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
         Me.AddNewCourseToolStripMenuItem.Text = "Add New Course"
+        '
+        'RemoveCourseToolStripMenuItem
+        '
+        Me.RemoveCourseToolStripMenuItem.Name = "RemoveCourseToolStripMenuItem"
+        Me.RemoveCourseToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.RemoveCourseToolStripMenuItem.Text = "Remove Course"
+        '
+        'EditCourseToolStripMenuItem
+        '
+        Me.EditCourseToolStripMenuItem.Name = "EditCourseToolStripMenuItem"
+        Me.EditCourseToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.EditCourseToolStripMenuItem.Text = "Edit Course"
+        '
+        'ManageCoursesToolStripMenuItem
+        '
+        Me.ManageCoursesToolStripMenuItem.Name = "ManageCoursesToolStripMenuItem"
+        Me.ManageCoursesToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.ManageCoursesToolStripMenuItem.Text = "Manage Courses"
         '
         'SCOREToolStripMenuItem
         '
@@ -114,7 +133,7 @@ Partial Class MainForm
         'RecordNewGradesToolStripMenuItem
         '
         Me.RecordNewGradesToolStripMenuItem.Name = "RecordNewGradesToolStripMenuItem"
-        Me.RecordNewGradesToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.RecordNewGradesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.RecordNewGradesToolStripMenuItem.Text = "Record New Grades"
         '
         'PROGRAMSToolStripMenuItem
@@ -149,23 +168,11 @@ Partial Class MainForm
         Me.EXITToolStripMenuItem.Size = New System.Drawing.Size(42, 20)
         Me.EXITToolStripMenuItem.Text = "EXIT"
         '
-        'RemoveCourseToolStripMenuItem
-        '
-        Me.RemoveCourseToolStripMenuItem.Name = "RemoveCourseToolStripMenuItem"
-        Me.RemoveCourseToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.RemoveCourseToolStripMenuItem.Text = "Remove Course"
-        '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(22, 20)
         Me.ToolStripMenuItem1.Text = " "
-        '
-        'EditCourseToolStripMenuItem
-        '
-        Me.EditCourseToolStripMenuItem.Name = "EditCourseToolStripMenuItem"
-        Me.EditCourseToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.EditCourseToolStripMenuItem.Text = "Edit Course"
         '
         'MainForm
         '
@@ -206,4 +213,5 @@ Partial Class MainForm
     Friend WithEvents RemoveCourseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents EditCourseToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManageCoursesToolStripMenuItem As ToolStripMenuItem
 End Class
