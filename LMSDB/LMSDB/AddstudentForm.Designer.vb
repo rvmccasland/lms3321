@@ -39,7 +39,12 @@ Partial Class AddstudentForm
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBoxlName = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.LabelGender = New System.Windows.Forms.Label()
+        Me.GroupBoxGender = New System.Windows.Forms.GroupBox()
+        Me.RadioButtonMale = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonFemale = New System.Windows.Forms.RadioButton()
         CType(Me.PictureBoxStudent, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBoxGender.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -86,7 +91,7 @@ Partial Class AddstudentForm
         'TextBoxAddress
         '
         Me.TextBoxAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxAddress.Location = New System.Drawing.Point(114, 173)
+        Me.TextBoxAddress.Location = New System.Drawing.Point(114, 181)
         Me.TextBoxAddress.Multiline = True
         Me.TextBoxAddress.Name = "TextBoxAddress"
         Me.TextBoxAddress.Size = New System.Drawing.Size(502, 102)
@@ -97,7 +102,7 @@ Partial Class AddstudentForm
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(12, 173)
+        Me.Label4.Location = New System.Drawing.Point(12, 181)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(75, 20)
         Me.Label4.TabIndex = 6
@@ -116,7 +121,7 @@ Partial Class AddstudentForm
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(12, 291)
+        Me.Label5.Location = New System.Drawing.Point(12, 293)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(51, 20)
         Me.Label5.TabIndex = 8
@@ -127,7 +132,7 @@ Partial Class AddstudentForm
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(12, 336)
+        Me.Label6.Location = New System.Drawing.Point(12, 348)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(65, 20)
         Me.Label6.TabIndex = 10
@@ -156,8 +161,9 @@ Partial Class AddstudentForm
         '
         Me.ButtonCancelStudent.BackColor = System.Drawing.Color.Red
         Me.ButtonCancelStudent.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.ButtonCancelStudent.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.ButtonCancelStudent.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ButtonCancelStudent.Location = New System.Drawing.Point(494, 348)
+        Me.ButtonCancelStudent.Location = New System.Drawing.Point(494, 410)
         Me.ButtonCancelStudent.Name = "ButtonCancelStudent"
         Me.ButtonCancelStudent.Size = New System.Drawing.Size(122, 40)
         Me.ButtonCancelStudent.TabIndex = 14
@@ -167,8 +173,9 @@ Partial Class AddstudentForm
         'ButtonAddStudent
         '
         Me.ButtonAddStudent.BackColor = System.Drawing.Color.Blue
+        Me.ButtonAddStudent.FlatAppearance.BorderColor = System.Drawing.Color.Yellow
         Me.ButtonAddStudent.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ButtonAddStudent.Location = New System.Drawing.Point(347, 348)
+        Me.ButtonAddStudent.Location = New System.Drawing.Point(347, 410)
         Me.ButtonAddStudent.Name = "ButtonAddStudent"
         Me.ButtonAddStudent.Size = New System.Drawing.Size(118, 40)
         Me.ButtonAddStudent.TabIndex = 13
@@ -209,12 +216,62 @@ Partial Class AddstudentForm
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 18
         '
+        'LabelGender
+        '
+        Me.LabelGender.AutoSize = True
+        Me.LabelGender.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelGender.ForeColor = System.Drawing.Color.White
+        Me.LabelGender.Location = New System.Drawing.Point(343, 144)
+        Me.LabelGender.Name = "LabelGender"
+        Me.LabelGender.Size = New System.Drawing.Size(69, 20)
+        Me.LabelGender.TabIndex = 19
+        Me.LabelGender.Text = "Gender"
+        '
+        'GroupBoxGender
+        '
+        Me.GroupBoxGender.Controls.Add(Me.RadioButtonFemale)
+        Me.GroupBoxGender.Controls.Add(Me.RadioButtonMale)
+        Me.GroupBoxGender.Location = New System.Drawing.Point(418, 131)
+        Me.GroupBoxGender.Name = "GroupBoxGender"
+        Me.GroupBoxGender.Size = New System.Drawing.Size(198, 41)
+        Me.GroupBoxGender.TabIndex = 20
+        Me.GroupBoxGender.TabStop = False
+        '
+        'RadioButtonMale
+        '
+        Me.RadioButtonMale.AutoSize = True
+        Me.RadioButtonMale.Checked = True
+        Me.RadioButtonMale.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonMale.ForeColor = System.Drawing.Color.White
+        Me.RadioButtonMale.Location = New System.Drawing.Point(17, 9)
+        Me.RadioButtonMale.Name = "RadioButtonMale"
+        Me.RadioButtonMale.Size = New System.Drawing.Size(65, 24)
+        Me.RadioButtonMale.TabIndex = 0
+        Me.RadioButtonMale.TabStop = True
+        Me.RadioButtonMale.Text = "Male"
+        Me.RadioButtonMale.UseVisualStyleBackColor = True
+        '
+        'RadioButtonFemale
+        '
+        Me.RadioButtonFemale.AutoSize = True
+        Me.RadioButtonFemale.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonFemale.ForeColor = System.Drawing.Color.White
+        Me.RadioButtonFemale.Location = New System.Drawing.Point(88, 9)
+        Me.RadioButtonFemale.Name = "RadioButtonFemale"
+        Me.RadioButtonFemale.Size = New System.Drawing.Size(86, 24)
+        Me.RadioButtonFemale.TabIndex = 1
+        Me.RadioButtonFemale.TabStop = True
+        Me.RadioButtonFemale.Text = "Female"
+        Me.RadioButtonFemale.UseVisualStyleBackColor = True
+        '
         'AddstudentForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(129, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(728, 543)
+        Me.Controls.Add(Me.GroupBoxGender)
+        Me.Controls.Add(Me.LabelGender)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.TextBoxlName)
         Me.Controls.Add(Me.TextBoxStudentID)
@@ -236,6 +293,8 @@ Partial Class AddstudentForm
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AddstudentForm"
         CType(Me.PictureBoxStudent, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBoxGender.ResumeLayout(False)
+        Me.GroupBoxGender.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -258,4 +317,8 @@ Partial Class AddstudentForm
     Friend WithEvents Label7 As Label
     Friend WithEvents TextBoxlName As TextBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents LabelGender As Label
+    Friend WithEvents GroupBoxGender As GroupBox
+    Friend WithEvents RadioButtonFemale As RadioButton
+    Friend WithEvents RadioButtonMale As RadioButton
 End Class

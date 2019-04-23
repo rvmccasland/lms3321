@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports MySql.Data.MySqlClient
 
 Public Class AddstudentForm
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
@@ -19,44 +20,72 @@ Public Class AddstudentForm
     End Sub
 
     Private Sub ButtonAddStudent_Click(sender As Object, e As EventArgs) Handles ButtonAddStudent.Click
-        Dim student As New Student()
+        Try
+            Dim student As New Student()
+            Dim Student_id As String = TextBoxStudentID.Text
+            Dim fName As String = TextBoxfName.Text
+            Dim lName As String = TextBoxlName.Text
+            Dim Birth_Date As Date = DateTimePicker1.Value
+            Dim Address As String = TextBoxAddress.Text
+            Dim eMail As String = TextBoxeMail.Text
+            Dim Picture As New MemoryStream
 
-        Dim Student_id As Integer = TextBoxStudentID.Text
-        Dim fName As String = TextBoxfName.Text
-        Dim lName As String = TextBoxlName.Text
-        Dim Birth_Date As Date = DateTimePicker1.Value
-        Dim Address As String = TextBoxAddress.Text
-        Dim eMail As String = TextBoxeMail.Text
-        Dim Picture As New MemoryStream
+            Dim Gender As String = "Male"
+            If RadioButtonFemale.Checked Then
+                Gender = "Female"
+            End If
 
-        PictureBoxStudent.Image.Save(Picture, PictureBoxStudent.Image.RawFormat)
+            Dim born_year As Integer = DateTimePicker1.Value.Year
+            Dim this_year As Integer = Date.Now.Year
 
-        If student.insertStudent(Student_id, fName, lName, Birth_Date, Address, eMail, Picture) Then
+            'Allow only students age between 15 - 100
+            If this_year - born_year < 15 Or this_year - born_year > 100 Then
+                MsgBox("Student Age Must Be Between 15 and 100 years", MsgBoxStyle.Information, "Birth Date Error Detected")
 
-            MsgBox("New Student Added Successfully", MsgBoxStyle.Information, "Add Student")
-        Else
-            MsgBox("Error Adding New Student", MsgBoxStyle.Critical, "Add Student")
-        End If
+            Else
 
-    End Sub
+                If Verify() Then
+                    PictureBoxStudent.Image.Save(Picture, PictureBoxStudent.Image.RawFormat)
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+                    If student.InsertStudent(Student_id, fName, lName, Birth_Date, Gender, Address, eMail, Picture) Then
+
+                        MsgBox("New Student Added Successfully", MsgBoxStyle.Information, "Add Student")
+                    Else
+                        MsgBox("Error Adding New Student", MsgBoxStyle.Critical, "Add Student")
+                    End If
+                Else
+                    MsgBox("Empty Fields", MsgBoxStyle.Critical, "Add Student")
+                End If
+            End If
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+
+        End Try
+
+        'clear fields  after Add
+        TextBoxStudentID.Text = ""
+        TextBoxfName.Text = ""
+        TextBoxlName.Text = ""
+        TextBoxAddress.Text = ""
+        TextBoxeMail.Text = ""
+        DateTimePicker1.Value = Date.Now
+        PictureBoxStudent.Image = Nothing
+
 
     End Sub
 
     Private Sub TextBoxStudentID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxStudentID.KeyPress
         'Allow only numbers on this textbox
         If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then
-
             e.Handled = True
-
         End If
     End Sub
 
     'Functio to verify data
-    Function verify() As Boolean
+    Function Verify() As Boolean
 
-        If TextBoxStudentID.Text.Trim() = "" Or TextBoxfName.Text.Trim() = "" Or TextBoxlName.Text.Trim() = "" Or TextBoxAddress.Text.Trim() = "" Then
+        If TextBoxStudentID.Text.Trim() = "" Or TextBoxfName.Text.Trim() = "" Or TextBoxlName.Text.Trim() = "" Or TextBoxAddress.Text.Trim() = "" Or PictureBoxStudent.Image Is Nothing Then
 
             Return False
 
@@ -69,6 +98,8 @@ Public Class AddstudentForm
         Return True
 
     End Function
+
+
 
 
 End Class

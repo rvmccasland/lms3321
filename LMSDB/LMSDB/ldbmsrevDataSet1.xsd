@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ldbmsrevDataSet1" targetNamespace="http://tempuri.org/ldbmsrevDataSet1.xsd" xmlns:mstns="http://tempuri.org/ldbmsrevDataSet1.xsd" xmlns="http://tempuri.org/ldbmsrevDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ldbmsrevConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ldbmsrevConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LMSDB.My.MySettings.GlobalReference.Default.ldbmsrevConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="courseTableAdapter" GeneratorDataComponentClassName="courseTableAdapter" Name="course" UserDataComponentName="courseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ldbmsrevConnectionString (MySettings)" DbObjectName="ldbmsrev.course" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `Course_id`, `Course_Title`, `Course_Prog_id`, `Course_Teacher_id`, `Description`, `CourseHours` FROM `course`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ldbmsrevDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ldbmsrevDataSet1" msprop:Generator_UserDSName="ldbmsrevDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="course" msprop:Generator_TableClassName="courseDataTable" msprop:Generator_TableVarName="tablecourse" msprop:Generator_TablePropName="course" msprop:Generator_RowDeletingName="courseRowDeleting" msprop:Generator_RowChangingName="courseRowChanging" msprop:Generator_RowEvHandlerName="courseRowChangeEventHandler" msprop:Generator_RowDeletedName="courseRowDeleted" msprop:Generator_UserTableName="course" msprop:Generator_RowChangedName="courseRowChanged" msprop:Generator_RowEvArgName="courseRowChangeEvent" msprop:Generator_RowClassName="courseRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
