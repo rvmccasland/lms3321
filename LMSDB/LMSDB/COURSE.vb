@@ -113,7 +113,7 @@ WHERE `Course_id` = @Course_idUpdate;", db.getConnection)
         db.closeConnection()
 
     End Function
-    'Function to count rows
+    'Function to count rows of courses
     Function ExecCount(ByVal query As String) As String
 
         Dim command As New MySqlCommand(query, db.getConnection)

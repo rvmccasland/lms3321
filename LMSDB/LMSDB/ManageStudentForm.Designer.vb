@@ -51,6 +51,7 @@ Partial Class ManageStudentForm
         Me.ButtonDownload = New System.Windows.Forms.Button()
         Me.LabelStudentTotal = New System.Windows.Forms.Label()
         Me.ButtonSearch = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.DataGridViewStudentList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBoxGender.SuspendLayout()
         CType(Me.PictureBoxStudent, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -361,12 +362,24 @@ Partial Class ManageStudentForm
         Me.ButtonSearch.Text = "&Search"
         Me.ButtonSearch.UseVisualStyleBackColor = False
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(479, 9)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(286, 25)
+        Me.Label8.TabIndex = 49
+        Me.Label8.Text = "STUDENT MANAGEMENT"
+        '
         'ManageStudentForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(194, Byte), Integer), CType(CType(129, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1279, 541)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ButtonSearch)
         Me.Controls.Add(Me.LabelStudentTotal)
         Me.Controls.Add(Me.ButtonDownload)
@@ -435,4 +448,5 @@ Partial Class ManageStudentForm
     Friend WithEvents ButtonDownload As Button
     Friend WithEvents LabelStudentTotal As Label
     Friend WithEvents ButtonSearch As Button
+    Friend WithEvents Label8 As Label
 End Class

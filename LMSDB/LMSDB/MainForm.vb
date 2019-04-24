@@ -73,8 +73,14 @@
 
     Private Sub RecordNewGradesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecordNewGradesToolStripMenuItem.Click
 
-        Dim CalculateGradesF As New NewTestForm()
-        CalculateGradesF.Show(Me)
+        Dim CalculateGradesF As New AddGradesForm()
+        AddGradesForm.Show(Me)
+
+    End Sub
+
+    Private Sub ManageGradesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageGradesToolStripMenuItem.Click
+        Dim ManageGradesF As New ManageGrades()
+        ManageGrades.Show(Me)
 
     End Sub
 End Class

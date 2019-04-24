@@ -43,6 +43,7 @@ Partial Class MainForm
         Me.AddNewTeacherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EXITToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageGradesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -125,7 +126,7 @@ Partial Class MainForm
         '
         'SCOREToolStripMenuItem
         '
-        Me.SCOREToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RecordNewGradesToolStripMenuItem})
+        Me.SCOREToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RecordNewGradesToolStripMenuItem, Me.ManageGradesToolStripMenuItem})
         Me.SCOREToolStripMenuItem.Name = "SCOREToolStripMenuItem"
         Me.SCOREToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.SCOREToolStripMenuItem.Text = "GRADES"
@@ -134,7 +135,7 @@ Partial Class MainForm
         '
         Me.RecordNewGradesToolStripMenuItem.Name = "RecordNewGradesToolStripMenuItem"
         Me.RecordNewGradesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.RecordNewGradesToolStripMenuItem.Text = "Record New Grades"
+        Me.RecordNewGradesToolStripMenuItem.Text = "Add  Grades"
         '
         'PROGRAMSToolStripMenuItem
         '
@@ -173,6 +174,12 @@ Partial Class MainForm
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(22, 20)
         Me.ToolStripMenuItem1.Text = " "
+        '
+        'ManageGradesToolStripMenuItem
+        '
+        Me.ManageGradesToolStripMenuItem.Name = "ManageGradesToolStripMenuItem"
+        Me.ManageGradesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ManageGradesToolStripMenuItem.Text = "Manage Grades"
         '
         'MainForm
         '
@@ -214,4 +221,5 @@ Partial Class MainForm
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents EditCourseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManageCoursesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ManageGradesToolStripMenuItem As ToolStripMenuItem
 End Class

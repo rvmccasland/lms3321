@@ -105,6 +105,12 @@
     <Compile Include="AddCourseForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AddGradesForm.Designer.vb">
+      <DependentUpon>AddGradesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddGradesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AddstudentForm.Designer.vb">
       <DependentUpon>AddstudentForm.vb</DependentUpon>
     </Compile>
@@ -112,8 +118,13 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="AverageScoreCourseForm.Designer.vb">
+      <DependentUpon>AverageScoreCourseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AverageScoreCourseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="COURSE.vb" />
-    <Compile Include="CourseDNU.vb" />
     <Compile Include="EditCourseForm.Designer.vb">
       <DependentUpon>EditCourseForm.vb</DependentUpon>
     </Compile>
@@ -146,6 +157,12 @@
     <Compile Include="ManagecourseForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ManageGrades.Designer.vb">
+      <DependentUpon>ManageGrades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageGrades.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ManageStudentForm.Designer.vb">
       <DependentUpon>ManageStudentForm.vb</DependentUpon>
     </Compile>
@@ -159,10 +176,10 @@
     <Compile Include="DeleteCourseForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewTestForm.Designer.vb">
-      <DependentUpon>NewTestForm.vb</DependentUpon>
+    <Compile Include="RemoveGrade.Designer.vb">
+      <DependentUpon>RemoveGrade.vb</DependentUpon>
     </Compile>
-    <Compile Include="NewTestForm.vb">
+    <Compile Include="RemoveGrade.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StaticsForm.Designer.vb">
@@ -216,8 +233,14 @@
     <EmbeddedResource Include="AddCourseForm.resx">
       <DependentUpon>AddCourseForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddGradesForm.resx">
+      <DependentUpon>AddGradesForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddstudentForm.resx">
       <DependentUpon>AddstudentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AverageScoreCourseForm.resx">
+      <DependentUpon>AverageScoreCourseForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteCourseForm.resx">
       <DependentUpon>DeleteCourseForm.vb</DependentUpon>
@@ -234,6 +257,9 @@
     <EmbeddedResource Include="ManagecourseForm.resx">
       <DependentUpon>ManagecourseForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageGrades.resx">
+      <DependentUpon>ManageGrades.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageStudentForm.resx">
       <DependentUpon>ManageStudentForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -243,8 +269,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewTestForm.resx">
-      <DependentUpon>NewTestForm.vb</DependentUpon>
+    <EmbeddedResource Include="RemoveGrade.resx">
+      <DependentUpon>RemoveGrade.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaticsForm.resx">
       <DependentUpon>StaticsForm.vb</DependentUpon>

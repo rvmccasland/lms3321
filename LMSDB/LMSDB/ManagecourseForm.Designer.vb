@@ -39,6 +39,8 @@ Partial Class ManagecourseForm
         Me.ButtonFirst = New System.Windows.Forms.Button()
         Me.ButtonLast = New System.Windows.Forms.Button()
         Me.LabelCourseTotal = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.NumericUpDownCourseHrs, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -146,10 +148,10 @@ Partial Class ManagecourseForm
         '
         Me.ListBoxCourses.FormattingEnabled = True
         Me.ListBoxCourses.ItemHeight = 18
-        Me.ListBoxCourses.Location = New System.Drawing.Point(493, 110)
+        Me.ListBoxCourses.Location = New System.Drawing.Point(493, 74)
         Me.ListBoxCourses.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.ListBoxCourses.Name = "ListBoxCourses"
-        Me.ListBoxCourses.Size = New System.Drawing.Size(522, 382)
+        Me.ListBoxCourses.Size = New System.Drawing.Size(522, 418)
         Me.ListBoxCourses.TabIndex = 36
         '
         'ButtonEdit
@@ -240,12 +242,36 @@ Partial Class ManagecourseForm
         Me.LabelCourseTotal.Text = "Total Courses:"
         Me.LabelCourseTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(136, 28)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(349, 31)
+        Me.Label4.TabIndex = 48
+        Me.Label4.Text = "COURSE MANAGEMENT"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(582, 28)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(319, 31)
+        Me.Label5.TabIndex = 49
+        Me.Label5.Text = "COURSES AVAILABLE"
+        '
         'ManagecourseForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1081, 623)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.LabelCourseTotal)
         Me.Controls.Add(Me.ButtonLast)
         Me.Controls.Add(Me.ButtonPrevious)
@@ -291,4 +317,6 @@ Partial Class ManagecourseForm
     Friend WithEvents ButtonFirst As Button
     Friend WithEvents ButtonLast As Button
     Friend WithEvents LabelCourseTotal As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
 End Class
