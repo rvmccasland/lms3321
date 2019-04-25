@@ -83,4 +83,9 @@
         ManageGrades.Show(Me)
 
     End Sub
+
+    Private Sub AddNewTeacherToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewTeacherToolStripMenuItem.Click
+        Dim manageTeacherF As New ManageTeacherForm()
+        manageTeacherF.Show(Me)
+    End Sub
 End Class

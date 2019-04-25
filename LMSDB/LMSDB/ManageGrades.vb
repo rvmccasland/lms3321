@@ -105,4 +105,10 @@ Public Class ManageGrades
         avgScoreByCourse.Show(Me)
 
     End Sub
+
+    Private Sub ButtonAVGstudent_Click(sender As Object, e As EventArgs) Handles ButtonAVGstudent.Click
+
+        Dim avgScoreByStudent As New StudentGradesForm()
+        avgScoreByStudent.Show(Me)
+    End Sub
 End Class

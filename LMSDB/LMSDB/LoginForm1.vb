@@ -11,6 +11,7 @@ Public Class LoginForm1
             Dim db As New MYSQL_DB_()
             Dim adapter As New MySqlDataAdapter()
             Dim table As New DataTable()
+            'Dim command As New MySqlCommand("select * from ldbmsrev.student where lName = @usn and Student_id = @pass", db.getConnection)
             Dim command As New MySqlCommand("select * from ldbmsrev.user where username = @usn and password = @pass", db.getConnection)
 
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = UsernameTextBox.Text
@@ -19,21 +20,21 @@ Public Class LoginForm1
             adapter.SelectCommand = command
             adapter.Fill(table)
 
+
             If table.Rows.Count > 0 Then
 
                 MsgBox("Username and Password are valid")
 
                 MainForm.Show()
-
-                'Me.Close()
-
-                'StudentForm.Show()
+                'ManageStudentForm.Show()
                 Me.Hide()
 
             Else
                 MsgBox("Invalid Username or Passwprd", MsgBoxStyle.Critical, " Login Error ")
                 Me.Close()
+
             End If
+
 
             'Mysqlcon = New MySqlConnection
             'Mysqlcon.ConnectionString = "server=localhost;userid=root;password=QzmP28chap73;database=ldbmsrev"

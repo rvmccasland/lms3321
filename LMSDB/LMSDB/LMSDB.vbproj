@@ -169,6 +169,12 @@
     <Compile Include="ManageStudentForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ManageTeacherForm.Designer.vb">
+      <DependentUpon>ManageTeacherForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTeacherForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MYSQL_DB_.vb" />
     <Compile Include="DeleteCourseForm.Designer.vb">
       <DependentUpon>DeleteCourseForm.vb</DependentUpon>
@@ -216,12 +222,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="StudentGradesForm.Designer.vb">
+      <DependentUpon>StudentGradesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentGradesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="StudentListForm.Designer.vb">
       <DependentUpon>StudentListForm.vb</DependentUpon>
     </Compile>
     <Compile Include="StudentListForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TEACHER.vb" />
     <Compile Include="UpdateDeleteStudentForm.Designer.vb">
       <DependentUpon>UpdateDeleteStudentForm.vb</DependentUpon>
     </Compile>
@@ -263,6 +276,9 @@
     <EmbeddedResource Include="ManageStudentForm.resx">
       <DependentUpon>ManageStudentForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageTeacherForm.resx">
+      <DependentUpon>ManageTeacherForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -277,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentForm.resx">
       <DependentUpon>StudentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentGradesForm.resx">
+      <DependentUpon>StudentGradesForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentListForm.resx">
       <DependentUpon>StudentListForm.vb</DependentUpon>

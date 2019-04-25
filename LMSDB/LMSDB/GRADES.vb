@@ -80,7 +80,19 @@ Public Class GRADES
 
     End Function
 
+    Function getSAVGtudentScore() As DataTable
 
+        Dim command As New MySqlCommand()
+        command.Connection = db.getConnection
+        'command.CommandText = "SELECT grades.Student_id, avg(grades.ExamGrade) AS 'Average Score' from student, grades where student.Student_id = grades.Student_id group by student.Student_id;"
+        command.CommandText = "SELECT S.student_id, S.fName, S.lName, SUM(C.CourseHours*P.ExamGrade)/SUM(C.CourseHours) AS AVERAGE FROM Grades P, Student S, Course C, grades G WHERE S.Student_id=G.Student_id AND C.Course_id=G.Course_id AND G.ExamGrade=P.ExamGrade GROUP BY S.Student_id, S.fName, S.lName;"
+        Dim adapter As New MySqlDataAdapter(command)
+        Dim table As New DataTable
+        adapter.Fill(table)
+
+        Return table
+
+    End Function
 
 
     Public Function DeleteGrade(ByVal Student_id As Integer, ByVal Course_id As Integer) As Boolean

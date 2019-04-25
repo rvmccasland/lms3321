@@ -11,10 +11,6 @@ Public Class ManageStudentForm
         Dim command As New MySqlCommand("SELECT Student_id, fName, lName, Birth_Date, Gender, Address, eMail, Picture FROM ldbmsrev.student ORDER BY Student_id;")
         FillGrid(command)
 
-        'Display Total Count of Students.
-        'LabelStudentTotal.Text = LabelStudentTotal.Text & " " & DataGridViewStudentList.Rows.Count
-
-
     End Sub
     Private Sub TextBoxStudentID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxStudentID.KeyPress
         'Allow only numbers on this textbox

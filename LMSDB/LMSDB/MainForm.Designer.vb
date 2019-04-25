@@ -37,13 +37,13 @@ Partial Class MainForm
         Me.ManageCoursesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SCOREToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecordNewGradesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageGradesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PROGRAMSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewProgramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TEACHERToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewTeacherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EXITToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageGradesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -134,8 +134,14 @@ Partial Class MainForm
         'RecordNewGradesToolStripMenuItem
         '
         Me.RecordNewGradesToolStripMenuItem.Name = "RecordNewGradesToolStripMenuItem"
-        Me.RecordNewGradesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RecordNewGradesToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.RecordNewGradesToolStripMenuItem.Text = "Add  Grades"
+        '
+        'ManageGradesToolStripMenuItem
+        '
+        Me.ManageGradesToolStripMenuItem.Name = "ManageGradesToolStripMenuItem"
+        Me.ManageGradesToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.ManageGradesToolStripMenuItem.Text = "Manage Grades"
         '
         'PROGRAMSToolStripMenuItem
         '
@@ -147,7 +153,7 @@ Partial Class MainForm
         'AddNewProgramToolStripMenuItem
         '
         Me.AddNewProgramToolStripMenuItem.Name = "AddNewProgramToolStripMenuItem"
-        Me.AddNewProgramToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.AddNewProgramToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AddNewProgramToolStripMenuItem.Text = "Add New Program"
         '
         'TEACHERToolStripMenuItem
@@ -160,8 +166,8 @@ Partial Class MainForm
         'AddNewTeacherToolStripMenuItem
         '
         Me.AddNewTeacherToolStripMenuItem.Name = "AddNewTeacherToolStripMenuItem"
-        Me.AddNewTeacherToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.AddNewTeacherToolStripMenuItem.Text = "Add New Teacher"
+        Me.AddNewTeacherToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AddNewTeacherToolStripMenuItem.Text = "Manage Teacher"
         '
         'EXITToolStripMenuItem
         '
@@ -174,12 +180,6 @@ Partial Class MainForm
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(22, 20)
         Me.ToolStripMenuItem1.Text = " "
-        '
-        'ManageGradesToolStripMenuItem
-        '
-        Me.ManageGradesToolStripMenuItem.Name = "ManageGradesToolStripMenuItem"
-        Me.ManageGradesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ManageGradesToolStripMenuItem.Text = "Manage Grades"
         '
         'MainForm
         '

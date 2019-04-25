@@ -38,6 +38,7 @@ Partial Class ManageGrades
         Me.ButtonShowStudents = New System.Windows.Forms.Button()
         Me.ButtonShowGrades = New System.Windows.Forms.Button()
         Me.ButtonAverage = New System.Windows.Forms.Button()
+        Me.ButtonAVGstudent = New System.Windows.Forms.Button()
         CType(Me.DataGridViewManageScore, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -203,12 +204,24 @@ Partial Class ManageGrades
         Me.ButtonAverage.Text = "A&Verage Score By Course"
         Me.ButtonAverage.UseVisualStyleBackColor = False
         '
+        'ButtonAVGstudent
+        '
+        Me.ButtonAVGstudent.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ButtonAVGstudent.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonAVGstudent.Location = New System.Drawing.Point(147, 413)
+        Me.ButtonAVGstudent.Name = "ButtonAVGstudent"
+        Me.ButtonAVGstudent.Size = New System.Drawing.Size(331, 34)
+        Me.ButtonAVGstudent.TabIndex = 69
+        Me.ButtonAVGstudent.Text = "AV&erage Score By Student"
+        Me.ButtonAVGstudent.UseVisualStyleBackColor = False
+        '
         'ManageGrades
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1083, 502)
+        Me.Controls.Add(Me.ButtonAVGstudent)
         Me.Controls.Add(Me.ButtonAverage)
         Me.Controls.Add(Me.ButtonShowGrades)
         Me.Controls.Add(Me.ButtonShowStudents)
@@ -250,4 +263,5 @@ Partial Class ManageGrades
     Friend WithEvents ButtonShowStudents As Button
     Friend WithEvents ButtonShowGrades As Button
     Friend WithEvents ButtonAverage As Button
+    Friend WithEvents ButtonAVGstudent As Button
 End Class
